@@ -4,7 +4,7 @@ services:
       context: .
     command: bash start-dev.sh
     environment:
-      DB_URL: jdbc:postgresql://db:5432/barber-shop
+      DB_URL: jdbc:postgresql://db:5432/barber-shop-api
       DB_USER: postgres
       DB_PASSWORD: root
       SPRING_PROFILES_ACTIVE: dev
@@ -22,10 +22,10 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: barber-shop
+      POSTGRES_DB: barber-shop-api
       SPRING_PROFILES_ACTIVE: dev
     ports:
-      - "5433:5432"
+      - "5432:5432"
     networks:
       - barber-shop-net
 networks:
